@@ -6,6 +6,9 @@
 // import 'some-node-module';
 // import SomeModule from 'some-node-module';
 
+//Bootstrap
+import * as bootstrap from 'bootstrap';
+
 /**
  * Write any other JavaScript below
  */

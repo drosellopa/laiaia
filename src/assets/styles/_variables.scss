@@ -1,12 +1,26 @@
 @use "sass:color";
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 $font-family: "Lora", serif;
 
 
 $primary-color: #FFC107;
 $secondary-color: #3F2E85;
-$site-bg: color.scale($secondary-color, $lightness: 70%);
+//Com fem servir bootstrap genero les clases per fer servir aquest colors
+.bg-iaia-primary {
+    background-color: $primary-color;
+}
+.iaia-primary {
+    color: $primary-color;
+}
+.bg-iaia-secondary {
+    background-color: $secondary-color;
+}
+.iaia-secondary {
+    color: $secondary-color;
+}
+
+
+ @import "bootstrap/scss/bootstrap";
 
 $mqMinWidth: 420px;
