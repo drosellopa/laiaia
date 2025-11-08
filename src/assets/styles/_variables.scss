@@ -1,0 +1,12 @@
+@use "sass:color";
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+$font-family: "Lora", serif;
+
+
+$primary-color: #FFC107;
+$secondary-color: #3F2E85;
+$site-bg: color.scale($secondary-color, $lightness: 70%);
+
+$mqMinWidth: 420px;
