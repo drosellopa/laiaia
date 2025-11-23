@@ -2,8 +2,36 @@
 
 * {
   box-sizing: border-box;
+  
 }
 
 body {
-  font-family: "Lora", serif;
+  // font-family: "Lora", serif;
 }
+nav.navbar {
+//   background-color: variables.$bg-iaia;
+
+}
+.poster {
+    // background-color: beige;
+    // background-image: url('./../images/teapots-1858601_1280.jpg');
+    // color: #fff;  
+    &__content {
+        padding: 20px;
+    }
+    &__content__gallery {
+        display: grid;        
+        grid-template-columns: 1fr;
+        gap: 20px;
+        &__item {
+            background-color: #fff;
+
+
+        }
+    }
+
+
+    
+}
+
+

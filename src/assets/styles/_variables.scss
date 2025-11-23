@@ -1,26 +1,19 @@
 @use "sass:color";
 
 
-$font-family: "Lora", serif;
 
 
-$primary-color: #FFC107;
-$secondary-color: #3F2E85;
-//Com fem servir bootstrap genero les clases per fer servir aquest colors
-.bg-iaia-primary {
-    background-color: $primary-color;
-}
-.iaia-primary {
-    color: $primary-color;
-}
-.bg-iaia-secondary {
-    background-color: $secondary-color;
-}
-.iaia-secondary {
-    color: $secondary-color;
-}
+
+$primary: #FFC107;
+$secondary: #3F2E85;
+$navbar-dark-color: $secondary;
+$navbar-dark-hover-color: #fff;
+$navbar-dark-active-color: $secondary;
+$bg-iaia: color.scale($primary, $lightness: 70%);
+// $font-family-sans-serif: 'Lora', serif;
+// $font-family-base: $font-family-sans-serif;
 
 
- @import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 $mqMinWidth: 420px;
