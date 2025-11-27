@@ -1,37 +1,88 @@
 @use "../variables";
+@use "./header";
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;  
   
 }
-
 body {
   // font-family: "Lora", serif;
 }
-nav.navbar {
-//   background-color: variables.$bg-iaia;
-
-}
-.poster {
-    // background-color: beige;
-    // background-image: url('./../images/teapots-1858601_1280.jpg');
-    // color: #fff;  
-    &__content {
-        padding: 20px;
-    }
-    &__content__gallery {
-        display: grid;        
-        grid-template-columns: 1fr;
-        gap: 20px;
-        &__item {
-            background-color: #fff;
-
-
-        }
-    }
-
-
+.main-header {
+    background-color: rgba(variables.$primary,0.7);
     
 }
+
+.poster {
+    // background-color: beige;
+  background-image: linear-gradient( #000a, #000a), url('./../images/teapots-1858601_1280.jpg');
+  color: #fff;  
+ 
+  
+  &__content__gallery {
+      
+      display: grid;        
+      grid-template-columns: 1fr;
+      gap: 10px;
+      list-style: none;
+       
+
+      @media(min-width: 600px){
+        grid-template-columns: repeat(2,1fr);
+        text-align: center;
+        .poster__content__title {
+          grid-column: span 2;
+        }
+
+        .poster__content__gallery__item:nth-child(2) {
+          grid-row: span 2;
+        }
+        .poster__content__gallery__item:nth-child(3) {
+          
+        }
+        .poster__content__gallery__item:nth-child(4) {
+          
+        }
+        .poster__content__gallery__item:last-child {
+          grid-column: span 2;
+        }
+        
+      }    
+      @media(min-width: 900px){
+        grid-template-columns: repeat(4,1fr);
+      }
+      @media(min-width: 1200px){
+        grid-template-columns: repeat(8,1fr);
+      }
+      &__item {
+             
+          
+      }
+      &__item.title {
+        padding: 20px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: variables.$secondary;          
+          border: 5px solid variables.$primary;  
+      }
+      &__item.image {
+        
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        
+      }
+     
+
+      
+  }
+  
+}
+
+
 
 
