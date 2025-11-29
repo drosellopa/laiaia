@@ -4,6 +4,7 @@
 * {
   box-sizing: border-box;  
   
+  
 }
 body {
   // font-family: "Lora", serif;
@@ -16,71 +17,79 @@ body {
 .poster {
     // background-color: beige;
   background-image: linear-gradient( #000a, #000a), url('./../images/teapots-1858601_1280.jpg');
-  color: #fff;  
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+    
  
   
   &__content__gallery {
-      
+      padding: 20px;
       display: grid;        
-      grid-template-columns: 1fr;
-      gap: 10px;
-      list-style: none;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: 300px 300px 300px;
+      gap: 20px;
+      list-style: none;  
        
-
-      @media(min-width: 600px){
-        grid-template-columns: repeat(2,1fr);
-        text-align: center;
-        .poster__content__title {
-          grid-column: span 2;
-        }
-
-        .poster__content__gallery__item:nth-child(2) {
-          grid-row: span 2;
-        }
-        .poster__content__gallery__item:nth-child(3) {
-          
-        }
-        .poster__content__gallery__item:nth-child(4) {
-          
-        }
-        .poster__content__gallery__item:last-child {
-          grid-column: span 2;
-        }
-        
-      }    
-      @media(min-width: 900px){
-        grid-template-columns: repeat(4,1fr);
+      &__item:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
       }
-      @media(min-width: 1200px){
-        grid-template-columns: repeat(8,1fr);
+      &__item:nth-child(2) {
+        grid-column: span 3;
       }
-      &__item {
-             
-          
+      
+     
+      &__item:nth-child(4) {
+        grid-row: span 3;
+        grid-column: span 2;
       }
-      &__item.title {
-        padding: 20px;
-        height: 100%;
+       &__item:nth-child(6) {
+        // grid-row: span 2;
+        grid-column: span 3;
+      }
+       &__item:nth-child(7) {
+        // grid-row: span 3;
+        grid-column: span 3;
+      }
+       
+     
+     
+    
+      &__item {        
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: variables.$secondary;          
-          border: 5px solid variables.$primary;  
-      }
-      &__item.image {
-        
+        background-color: variables.$secondary;
+        border: 5px solid white;            
+       
+        position: relative;
+        > h3 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          font-size: 3rem;
+        }  
         > img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
-        
-      }
-     
-
-      
+      }    
   }
   
+}
+
+.poster__content__title {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > h1 {
+    font-size: 4rem;
+  }
 }
 
 
