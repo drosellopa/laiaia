@@ -1,0 +1,58 @@
+@use "../variables";
+@use "./header";
+
+.ponents {
+    padding: 20px;
+    margin: 100px auto 0;
+    max-width: 1350px;
+    &__title {
+        text-align: center;
+        margin-bottom: 40px;
+        color: variables.$secondary;
+        font-size: 2rem;
+        text-transform: uppercase;
+
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    &__item {
+        flex: 1 1 325px;
+        text-align: center;
+    }
+    &__image {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+    }
+    &__caption {
+        padding: 10px;
+    }
+    &__name {
+        color: variables.$secondary;
+        font-size: 1.3rem;
+    }
+    &__role {
+        font-size: 1.1rem;
+    }
+    &__description {
+        
+    }
+    @media (min-width: 600px){
+        &__title {
+             font-size: 3rem;
+        }
+    }
+    @media (min-width: 900px){
+        &__title {
+             font-size: 4rem;
+        }
+    }
+    @media (min-width: 1200px){
+        &__title {
+             font-size: 6rem;
+        }
+    }
+}
