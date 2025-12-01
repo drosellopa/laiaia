@@ -43,6 +43,9 @@ body {
       opacity: .8;
       box-shadow: 0 0 5px #fff;
       position: relative;
+      &:has(a) {
+        cursor: pointer;
+      }
 
       > h3 {
         position: absolute;
