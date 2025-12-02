@@ -3,29 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacte i més - La cuina de la iaia</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    
 </head>
 <body>
     <include src="./views/header.html"></include>
-    <form action="./views/gracies.html" name="contacte" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contacte">
-        <p class="hidden">
-            <label>Si ets humà, deixa aquest camp buit:
-                <input name="bot-field">
-            </label>
-        </p>
-        <label>
-            Nom:<input type="text" name="nom" required>
-        </label>
-        <label>
-            Correu electrònic: <input type="email" name="correu" required>
-        </label>
-
-        <label>
-            Missatge: <textarea name="missatge" required></textarea>
-        </label>
-        <button type="submit">Envia</button>
-    </form>
-
+    <main class="container main-contacte">
+        <section id="contact-form">
+             <form action="gracies.html" name="contacte" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="needs-validation" novalidate>
+                <input type="hidden" name="form-name" value="contacte">
+                <!-- Aquest és el HoneyPot amagat -->
+                <div class="d-none">
+                    <label>Si ets humà, deixa aquest camp buit: <input name="bot-field"></label>
+                </div>
+                <div class="mb-3">
+                    <label for="nom" class="form-label">Nom:</label>
+                    <input type="text" id="nom" name="nom" class="form-control" required>
+                    <div class="invalid-feedback">Si us plau, introdueix el teu nom.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="correu" class="form-label">Correu electrònic:</label>
+                    <input type="email" id="correu" name="correu" class="form-control" required>
+                    <div class="invalid-feedback">Si us plau, introdueix una adreça de correu vàlida.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="missatge" class="form-label">Missatge:</label>
+                    <textarea id="missatge" name="missatge" class="form-control" rows="5" required></textarea>
+                    <div class="invalid-feedback">Si us plau, introdueix el teu missatge.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Envia</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
