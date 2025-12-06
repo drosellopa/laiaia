@@ -2,37 +2,37 @@
 @use "../variables";
 @use "./header";
 
-.main-contacte {
-    margin-top: 80px;
-    padding: 20px;
+@layer layout-contacte {
+  .main-contacte {
+      margin-top: 80px;
+      padding: 20px;
 
-    container-type: inline-size;
-    container-name: contacte;
-}
-
-.form-contacte {
-
-    max-width: 800px;
-    display: flex;
-    margin: 20px auto;
-    flex-direction: column;
-    gap: 15px;
-    
-}
-
-@container contacte (min-width: 700px) {
-  .form-contacte {
-    gap: 20px;
-    textarea {
-      width: 100%;
-      
-    }
-
-    button {
-      max-width: 200px;
-    }
-   
+      container-type: inline-size;
+      container-name: contacte;
   }
 
-  
+  .form-contacte {
+
+      max-width: 800px;
+      display: flex;
+      margin: 20px auto;
+      flex-direction: column;
+      gap: 15px;
+      
+  }
+
+  @container contacte (min-width: 700px) {
+    .form-contacte {
+      gap: 20px;
+      textarea {
+        width: 100%;
+        
+      }
+
+      button {
+        max-width: 200px;
+      }
+    
+    }    
+  }
 }

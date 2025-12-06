@@ -1,4 +1,8 @@
 @use "../variables";
-.main-header {
-    box-shadow: 0 1px 5px variables.$secondary;
+
+@layer global {
+    .main-header {
+        box-shadow: 0 1px 5px variables.$secondary;
+    }
 }
+

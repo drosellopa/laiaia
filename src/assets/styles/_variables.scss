@@ -15,7 +15,9 @@ $navbar-dark-active-color: $secondary;
 // $font-family-sans-serif: 'Lora', serif;
 // $font-family-base: $font-family-sans-serif;
 
+@layer framework {
+    @import "bootstrap/scss/bootstrap";
+}
 
-@import "bootstrap/scss/bootstrap";
 
 $mqMinWidth: 420px;
