@@ -10,19 +10,20 @@
         background-size: cover;
         background-position: center;
         color: white;
-        @media(min-width: 600px){
-        
+
+        @media(600px <= width){        
             .article__title {
                 font-size: 2.5rem;
                 max-width: 1350px;
                 margin: auto;
             }
         }
-        @media(min-width: 1200px){
+
+        @media(1200px <= width){
             padding: 200px 50px;
+
             .article__title {
                 font-size: 4rem;
-
             }
         }
     
@@ -33,18 +34,20 @@
         max-width: 1350px;
         margin: auto;
         container-type: inline-size;
-        container-name: jornada;
-        
+        container-name: jornada;        
     }
+    
     .article__intro {
-        @container jornada (min-width: 900px){        
+        @container jornada (900px <= width){        
             display: flex;
             gap: 40px;
             
         }
     }
+
     .article__list {
         margin: 50px 0;
+
         &-title {
             color: variables.$secondary;
         }
@@ -52,22 +55,21 @@
         &> ul {
             list-style: none;
             
-            &> li {
-                        
+            &> li {                        
                 display: inline-block;            
-                background-image: url(../images/logo.webp);
+                background-image: url('../images/logo.webp');
                 background-repeat: no-repeat;
                 background-size: 30px 30px;
                 background-position: left top;
                 padding-left: 40px;
             }
-        }
+        }        
+    }
 
-        
-    }
     .article :is(p, h3) {
-    margin-bottom: 1rem;
+        margin-bottom: 1rem;
     }
+
     .article__quote {
         font-family: 'Times New Roman', Times, serif;
         font-style: italic;

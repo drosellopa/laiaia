@@ -5,32 +5,68 @@
 @layer layout-contacte {
   .main-contacte {
       margin-top: 80px;
-      padding: 20px;
 
+      // padding: 20px; Noves mides
+      padding-block: 2svh;
+      padding-inline: 4cqw;
+      background-color: oklch(98% 0.02 110deg);
       container-type: inline-size;
       container-name: contacte;
+
+      h2 {
+        text-align: center;
+        color:  oklch(41% 0.14 304deg);
+        font-size: 4rem;
+      }
   }
 
-  .form-contacte {
+  
 
+  .form-contacte {
       max-width: 800px;
       display: flex;
-      margin: 20px auto;
+
+      // margin: 20px auto;
+      margin: 4svh auto;
       flex-direction: column;
-      gap: 15px;
+
+      // gap: 15px;
+      gap: 2cqw;      
+      padding: 5cqw;
       
+  }
+
+  .form-contacte input:focus,
+  .form-contacte textarea:focus {
+    outline: none;
+    border-color: oklch(41% 0.14 304deg);
+    box-shadow: 0 0 0 4px oklch(85% 0.18 260deg / 40%);
+  }
+
+  .form-contacte button {
+    padding: 2cqw 4cqw;
+    background-color: oklch(41% 0.14 304deg);
+    color: white;
+    border: none;
+    border-radius: 0.7rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .form-contacte button:hover {
+    background-color: oklch(45% 0.16 304deg);
   }
 
   @container contacte (min-width: 700px) {
     .form-contacte {
-      gap: 20px;
+      gap: 3cqw 4cqw;
+      
       textarea {
-        width: 100%;
-        
+        width: 100%;        
       }
 
       button {
-        max-width: 200px;
+        max-width: 25cqw;
       }
     
     }    

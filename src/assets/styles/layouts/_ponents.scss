@@ -7,6 +7,7 @@
         padding: 20px;
         margin: 100px auto 0;
         max-width: 1350px;
+        
         &__title {
             text-align: center;
             margin-bottom: 40px;
@@ -15,50 +16,58 @@
             text-transform: uppercase;
 
         }
+        
         &__list {
             display: flex;
             flex-direction: column;
-            // flex-wrap: wrap;
             gap: 20px;
         }
+        
         &__item {
             flex: 1 1 325px;
             text-align: center;
         }
+        
         &__image {
             width: 100%;
             max-width: 600px;
             border-radius: 10px;
         }
+        
         &__caption {
             padding: 10px;
         }
+        
         &__name {
             color: variables.$secondary;
             font-size: 1.3rem;
         }
+        
         &__role {
             font-size: 1.1rem;
         }
         
-        @container (min-width: 600px) {
+        @container (600px <= width) {
             .ponents__list {
-                flex-direction: row;
-                flex-wrap: wrap;
+                flex-flow: row wrap;            
             }
+
             .ponent {
                 width: 48%;
             }
+
             &__title {
                 font-size: 3rem;
             }
         }
-        @container (min-width: 900px){
+
+        @container (900px <= width){
             &__title {
                 font-size: 4rem;
             }
         }
-        @container (min-width: 1200px){
+
+        @container (1200px <= width){
             &__title {
                 font-size: 6rem;
             }
