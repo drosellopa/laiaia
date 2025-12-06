@@ -2,6 +2,7 @@
 @use "./header";
 
 .ponents {
+    container-type: inline-size; 
     padding: 20px;
     margin: 100px auto 0;
     max-width: 1350px;
@@ -15,7 +16,8 @@
     }
     &__list {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        // flex-wrap: wrap;
         gap: 20px;
     }
     &__item {
@@ -40,17 +42,24 @@
     &__description {
         
     }
-    @media (min-width: 600px){
+    @container (min-width: 600px) {
+        .ponents__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .ponent {
+            width: 48%;
+        }
         &__title {
-             font-size: 3rem;
+            font-size: 3rem;
         }
     }
-    @media (min-width: 900px){
+    @container (min-width: 900px){
         &__title {
              font-size: 4rem;
         }
     }
-    @media (min-width: 1200px){
+    @container (min-width: 1200px){
         &__title {
              font-size: 6rem;
         }
