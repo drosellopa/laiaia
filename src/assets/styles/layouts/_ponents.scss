@@ -1,5 +1,9 @@
+
+@use '../functions' as *;
 @use "../variables";
 @use "./header";
+
+
 
 @layer layout-ponents {
     .ponents {
@@ -26,12 +30,14 @@
         &__item {
             flex: 1 1 325px;
             text-align: center;
+            border-radius: 10px;
         }
         
         &__image {
             width: 100%;
             max-width: 600px;
-            border-radius: 10px;
+            border-radius: 10px 10px 0 0;
+            
         }
         
         &__caption {
@@ -72,5 +78,10 @@
                 font-size: 6rem;
             }
         }
+    }
+
+    .ponents__item:hover {
+       box-shadow: shadow-iaia(2);
+       background-color: alpha-iaia(variables.$primary, .1);        
     }
 }

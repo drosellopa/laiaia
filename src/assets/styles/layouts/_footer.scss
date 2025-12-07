@@ -1,0 +1,23 @@
+@use "../variables";
+
+@layer global {
+    .main-footer {
+        background-color: #eee;
+        text-align: center;
+        padding: 3rem 1rem;
+        color: variables.$secondary;
+        
+        .social {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .fa-brands {
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: variables.$secondary;
+        }
+    }
+}

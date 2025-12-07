@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacte i més - La cuina de la iaia</title>
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <link rel="icon" href="assets/images/logo.webp">
     
 </head>
 <body>
@@ -12,8 +13,9 @@
     <main class="container main-contacte">
         <section id="contact-form">
             <h2>Formulari de contacte</h2>
-             <form action="gracies.html" name="contacte" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="needs-validation form-contacte" novalidate>
+             <form action="/gracies.html" name="contacte" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="needs-validation form-contacte" novalidate>
                 <input type="hidden" name="form-name" value="contacte">
+                <input type="hidden" name="redirect" value="/gracies.html">
                 <!-- Aquest és el HoneyPot amagat -->
                 <div class="d-none">
                     <label>Si ets humà, deixa aquest camp buit: <input name="bot-field"></label>
@@ -37,5 +39,6 @@
             </form>
         </section>
     </main>
+    <include src="./views/footer.html"></include>
 </body>
 </html>

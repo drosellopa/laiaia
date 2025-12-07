@@ -1,5 +1,5 @@
 @use "../variables";
-@use "./header";
+
 
 @layer layout-home {
   .main-header {
@@ -39,7 +39,7 @@
         opacity: .8;
         box-shadow: 0 0 5px #fff;
         position: relative;
-        
+
         &:has(a) {
           cursor: pointer;
         }

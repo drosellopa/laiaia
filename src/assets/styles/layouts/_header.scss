@@ -4,5 +4,9 @@
     .main-header {
         box-shadow: 0 1px 5px variables.$secondary;
     }
+    
+    .navbar-nav a.nav-link:hover {
+        color: oklch(41% 0.14 304deg) !important;
+    }
 }
 
